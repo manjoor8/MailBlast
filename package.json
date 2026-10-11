@@ -1,0 +1,25 @@
+{
+  "name": "mailblast",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Web app to compose HTML emails, import contacts, send personalized bulk mail one-by-one, and search sent history.",
+  "main": "server/index.js",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "test": "node test/imports.test.js && node test/oauth.test.js && node test/oauth-recovery.test.js && node test/sanitize.test.js && node test/editor.test.js && node test/drafts-attachments.test.js && node test/smoke.test.js && node test/views.test.js",
+    "test:all": "npm test && node test/browser.test.js",
+    "test:browser": "node test/browser.test.js",
+    "seed": "node test/seed.js",
+    "diag:smtp": "node test/smtp-diag.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "multer": "^2.4.0",
+    "nodemailer": "^10.1.0"
+  }
+}

@@ -1,0 +1,59 @@
+# ---------------------------------------------------------------------------
+# Personal data — never commit
+# ---------------------------------------------------------------------------
+# The SQLite database holds contacts, sent history, drafts, the SMTP/OAuth
+# credentials and OAuth refresh tokens in plain text.
+data/
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+# Capture-mode copies of sent messages (real recipients and bodies).
+*.eml
+
+# Imported / exported contact lists and spreadsheets.
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.ods
+
+# Environment overrides and secrets.
+.env
+.env.*
+*.pem
+credentials.json
+service-account*.json
+
+# ---------------------------------------------------------------------------
+# Build and dependency output
+# ---------------------------------------------------------------------------
+node_modules/
+.npm-cache/
+npm-debug.log*
+yarn-error.log*
+
+# ---------------------------------------------------------------------------
+# Test artefacts
+# ---------------------------------------------------------------------------
+test/screenshots/
+coverage/
+
+# ---------------------------------------------------------------------------
+# Logs and temp files
+# ---------------------------------------------------------------------------
+*.log
+*.tmp
+*.bak
+
+# ---------------------------------------------------------------------------
+# Editors and operating systems
+# ---------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini

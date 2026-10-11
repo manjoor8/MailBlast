@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MailBlast — HTML email sender</title>
+    <meta name="description" content="Compose HTML email, import contacts, send personalized mail one by one, and search your sent history." />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✉️</text></svg>" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-mark">✉</span>
+          <div>
+            <strong>MailBlast</strong>
+            <small>HTML email sender</small>
+          </div>
+        </div>
+
+        <nav class="nav" id="nav">
+          <a href="#/compose" data-route="compose"><span class="nav-icon">✎</span> Compose</a>
+          <a href="#/drafts" data-route="drafts"><span class="nav-icon">💾</span> Drafts</a>
+          <a href="#/contacts" data-route="contacts"><span class="nav-icon">☰</span> Contacts <span class="pill" id="nav-contacts">0</span></a>
+          <a href="#/sent" data-route="sent"><span class="nav-icon">↺</span> Sent history <span class="pill" id="nav-sent">0</span></a>
+          <a href="#/settings" data-route="settings"><span class="nav-icon">⚙</span> Settings</a>
+        </nav>
+
+        <div class="sidebar-foot">
+          <div class="transport" id="transport-badge">
+            <span class="dot dot-muted"></span> Checking mail server…
+          </div>
+          <p class="hint">Sends messages one at a time, personalized per contact.</p>
+        </div>
+      </aside>
+
+      <main class="main" id="main">
+        <div class="loading">Loading…</div>
+      </main>
+    </div>
+
+    <div class="toasts" id="toasts"></div>
+    <div class="modal-root" id="modal-root"></div>
+
+    <script type="module" src="/js/app.js"></script>
+  </body>
+</html>
